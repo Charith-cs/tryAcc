@@ -6,7 +6,12 @@ import mailRoute from "./route/mailRoute.js"
 const app = express();
 app.use(express.json());
 
-app.use(cors());
+app.use(cors({
+    origin: ["https://try-acc-frontend.vercel.app"],
+    methods: ["POST", "GET", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 app.use("/api/check" , mailRoute);
 
