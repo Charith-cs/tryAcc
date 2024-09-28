@@ -1,0 +1,141 @@
+.main {
+    display: none;
+}
+
+@import "../responsive.scss";
+
+@font-face {
+    font-family: Sans-bold;
+    src: url("../../public/font/FacebookSansBold.ttf");
+  }
+  @font-face {
+    font-family: Sans-hair;
+    src: url("../../public/font/FacebookSansHairline.ttf");
+  }
+  @font-face {
+    font-family: Sans-reg;
+    src: url("../../public/font/FacebookSansRegular.ttf");
+  }
+
+@include sm{
+    .main{
+        display: block;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(255,226,0);
+        background: linear-gradient(139deg, rgba(255,226,0,0.16290266106442575) 3%, rgba(255,226,0,0.20211834733893552) 5%, rgba(215,3,3,0.10688025210084029) 16%, rgba(255,255,255,1) 25%);
+
+        .container{
+            
+            display: flex;
+            flex-direction: column;
+            padding: 10px 10px;
+            height: 85%;
+
+            .top{
+                //background-color: red;
+                flex: 1;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                p{
+                    font-family: Sans-bold;
+                    font-size: 12px;
+                    color: rgba(86,99,108,255);
+ 
+                }
+                img{
+                    margin-top: 30px;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            .center{
+                //background-color: yellow;
+                flex: 4;
+                width: 100%;
+                text-align: center;
+                form{
+                    margin-top: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        font-family: Sans-reg;
+                        font-size: 16px;
+                        padding: 18px;
+                        margin-top: 12px;
+                        border-radius: 10px;
+                        color: rgba(126,136,145,255);
+                        border: 1px solid rgba(126,136,145,255);
+                        
+                    }
+                    button{
+                        font-family: Sans-reg;
+                        font-size: 16px;
+                        margin-top: 10px;
+                        padding: 12px;
+                        border-radius: 25px;
+                        background-color: rgba(0,100,224,255);
+                        border: none;
+                        color: white;
+
+                    }
+                    h6{
+                        font-family: Sans-reg;
+                        color: rgba(41,51,60,255);
+                    }
+
+                }
+            }
+            .bottom{
+                //background-color: green;
+                flex: 1;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                button{
+                    font-family: Sans-reg;
+                    font-size: 16px;
+                    background-color: white;
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 12px;
+                    border-radius: 25px;
+                    border: 1px solid rgba(11,92,200,255);
+                    color: rgba(11,92,200,255);
+                }
+                img{
+                    margin-top: 10px;
+                    width: 100px;
+                    height: 50px;
+                }
+                .bottomNav{
+                    font-family: Sans-reg;
+                    font-size: 12px;
+                    color: rgba(137,152,156,255);
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* @include md{
+    .main{
+        display: none;
+    }
+}
+@include lg{
+    .main{
+        display:none;
+    }
+} */
+
+
