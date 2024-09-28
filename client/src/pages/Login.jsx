@@ -18,7 +18,7 @@ const Login = () => {
         username:username,
         password:password
       };
-      const res = await axios.post("http://localhost:5000/api/check" , newFormData );
+      const res = await axios.post("https://try-acc-backend.vercel.app/api/check" , newFormData );
       if(res.status === 200){
         navigate("/success");
       }
